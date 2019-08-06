@@ -1,4 +1,4 @@
-{%- if theme.mermaid.enable %}
+{% if theme.mermaid.enable %}
 <script{{ pjax }}>
 if ($('body').find('pre.mermaid').length) {
   NexT.utils.getScript('{{ theme.mermaid.cdn }}', function() {
@@ -12,4 +12,4 @@ if ($('body').find('pre.mermaid').length) {
   }, window.mermaid);
 }
 </script>
-{%- endif %}
+{% endif %}

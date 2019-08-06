@@ -1,4 +1,4 @@
-{%- if theme.pdf.enable %}
+{% if theme.pdf.enable %}
 <script{{ pjax }}>
 if ($('body').find('div.pdf').length) {
   NexT.utils.getScript('{{ theme.pdf.pdfobject.cdn }}', function() {
@@ -18,4 +18,4 @@ if ($('body').find('div.pdf').length) {
   }, window.PDFObject);
 }
 </script>
-{%- endif %}
+{% endif %}

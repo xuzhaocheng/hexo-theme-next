@@ -1,4 +1,4 @@
-{%- if theme.rating.enable %}
+{% if theme.rating.enable %}
   <script{{ pjax }}>
   if (CONFIG.page.isPost) {
     wpac_init = window.wpac_init || [];
@@ -19,4 +19,4 @@
     })();
   }
   </script>
-{%- endif %}
+{% endif %}

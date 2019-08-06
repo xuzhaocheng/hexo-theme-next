@@ -1,7 +1,7 @@
 {% include 'vendors.njk' %}
 {% include 'commons.njk' %}
 
-{%- set scheme_script = 'schemes/' + theme.scheme | lower + '.njk' %}
+{% set scheme_script = 'schemes/' + theme.scheme | lower + '.njk' %}
 {% include scheme_script %}
 
 {% include 'next-boot.njk' %}
