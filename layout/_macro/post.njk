@@ -54,7 +54,7 @@
               {{ next_url(post.path, post.title | default(__('post.untitled')), {class: 'post-title-link', itemprop: 'url' }) }}
             {% else -%}
               {{- post.title -}}
-              {% include '../_partials/post-edit.swig' %}
+              {% include '../_partials/post-edit.njk' %}
             {%- endif %}
           </{%- if theme.seo %}h2{% else %}h1{%- endif %}>
         {%- endif %}
@@ -262,7 +262,7 @@
     </div>
 
     {%- if theme.related_posts.enable and (theme.related_posts.display_in_home or not is_index) %}
-      {% include '../_partials/post/post-related.swig' with { post: post } %}
+      {% include '../_partials/post/post-related.njk' with { post: post } %}
     {%- endif %}
 
     {%- if not is_index %}
@@ -276,7 +276,7 @@
     {#####################}
 
     {%- if theme.wechat_subscriber.enable and not is_index %}
-      {% include '../_partials/post/wechat-subscriber.swig' %}
+      {% include '../_partials/post/wechat-subscriber.njk' %}
     {%- endif %}
 
     {%- if post.reward === undefined and theme.reward_settings.enable %}
@@ -286,13 +286,13 @@
     {%- endif %}
     {%- if reward_able and not is_index %}
       <div>
-        {% include '../_partials/post/reward.swig' %}
+        {% include '../_partials/post/reward.njk' %}
       </div>
     {%- endif %}
 
     {%- if theme.creative_commons.license and theme.creative_commons.post and not is_index %}
       <div>
-        {% include '../_partials/post/post-copyright.swig' with { post: post } %}
+        {% include '../_partials/post/post-copyright.njk' with { post: post } %}
       </div>
     {%- endif %}
 
@@ -338,7 +338,7 @@
         {%- if theme.likely.enable or (theme.needmoreshare2.enable and theme.needmoreshare2.postbottom.enable) %}
           <div class="social-share">
             {%- if theme.likely.enable %}
-              {% include '../_partials/share/likely.swig' %}
+              {% include '../_partials/share/likely.njk' %}
             {%- endif %}
             {%- if theme.needmoreshare2.enable and theme.needmoreshare2.postbottom.enable %}
               <div id="needsharebutton-postbottom">

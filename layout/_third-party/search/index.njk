@@ -1,7 +1,7 @@
 {%- if theme.algolia_search.enable %}
-  {% include 'algolia-search.swig' %}
+  {% include 'algolia-search.njk' %}
 {% elif theme.swiftype_key %}
-  {% include 'swiftype.swig' %}
+  {% include 'swiftype.njk' %}
 {% elif theme.local_search.enable %}
-  {% include 'localsearch.swig' %}
+  {% include 'localsearch.njk' %}
 {%- endif %}

@@ -1,5 +1,5 @@
-{% extends '_layout.swig' %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+{% extends '_layout.njk' %}
+{% import '_macro/sidebar.njk' as sidebar_template %}
 
 {% block title %}{{ page.title }} | {{ title }}{% endblock %}
 
@@ -8,7 +8,7 @@
 {% block content %}
 
   <div id="posts" class="posts-expand">
-    {{ partial('_macro/post.swig', {post: page}) }}
+    {{ partial('_macro/post.njk', {post: page}) }}
   </div>
 
 {% endblock %}
@@ -18,5 +18,5 @@
 {% endblock %}
 
 {% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
+  {% include '_scripts/pages/post-details.njk' %}
 {% endblock %}

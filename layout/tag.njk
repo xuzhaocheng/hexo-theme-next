@@ -1,6 +1,6 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post-collapse.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+{% extends '_layout.njk' %}
+{% import '_macro/post-collapse.njk' as post_template %}
+{% import '_macro/sidebar.njk' as sidebar_template %}
 
 {% block title %}{{ __('title.tag') }}: {{ page.tag }} | {{ title }}{% endblock %}
 
@@ -27,7 +27,7 @@
   {### END TAG BLOCK ###}
   {#####################}
 
-  {% include '_partials/pagination.swig' %}
+  {% include '_partials/pagination.njk' %}
 
 {% endblock %}
 

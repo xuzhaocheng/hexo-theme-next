@@ -1,5 +1,5 @@
 {% macro render(name, value) %}
-{% import 'menu-badge.swig' as menu_badge %}
+{% import 'menu-badge.njk' as menu_badge %}
 
   {%- set itemURL = value.split('||')[0] | trim %}
   {%- if itemURL.indexOf('http') != 0 %}

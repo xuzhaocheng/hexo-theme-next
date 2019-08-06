@@ -1,9 +1,9 @@
-{% include 'vendors.swig' %}
-{% include 'commons.swig' %}
+{% include 'vendors.njk' %}
+{% include 'commons.njk' %}
 
-{%- set scheme_script = 'schemes/' + theme.scheme | lower + '.swig' %}
+{%- set scheme_script = 'schemes/' + theme.scheme | lower + '.njk' %}
 {% include scheme_script %}
 
-{% include 'next-boot.swig' %}
-{% include 'exturl.swig' %}
-{% include 'three.swig' %}
+{% include 'next-boot.njk' %}
+{% include 'exturl.njk' %}
+{% include 'three.njk' %}

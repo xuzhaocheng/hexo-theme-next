@@ -26,7 +26,7 @@
       <div class="site-overview-wrap sidebar-panel{%- if not display_toc or toc(page.content).length <= 1 %} sidebar-panel-active{%- endif %}">
         <div class="site-overview">
 
-          {{ partial('_partials/sidebar/site-overview.swig', {}, {cache: theme.cache.enable}) }}
+          {{ partial('_partials/sidebar/site-overview.njk', {}, {cache: theme.cache.enable}) }}
           
           {%- for inject_item in theme.injects.sidebar %}
             {{ partial(inject_item.layout, inject_item.locals, inject_item.options) }}

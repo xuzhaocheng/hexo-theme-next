@@ -1,5 +1,5 @@
-{% extends '_layout.swig' %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+{% extends '_layout.njk' %}
+{% import '_macro/sidebar.njk' as sidebar_template %}
 
   {% block title %}{#
   #}{%- set page_title_suffix = ' | ' + title %}{#
@@ -24,7 +24,7 @@
     {### PAGE BLOCK ###}
     {##################}
     <div class="post-block page">
-      {% include '_partials/page/page-header.swig' %}
+      {% include '_partials/page/page-header.njk' %}
       {#################}
       {### PAGE BODY ###}
       {#################}
@@ -75,7 +75,7 @@
       {### END PAGE BODY ###}
       {#####################}
     </div>
-    {% include '_partials/page/breadcrumb.swig' %}
+    {% include '_partials/page/breadcrumb.njk' %}
     {######################}
     {### END PAGE BLOCK ###}
     {######################}
@@ -89,8 +89,8 @@
 
 {% block script_extra %}
   {%- if page.type === 'schedule' %}
-    {% include '_scripts/pages/schedule.swig' %}
+    {% include '_scripts/pages/schedule.njk' %}
   {% else %}
-    {% include '_scripts/pages/post-details.swig' %}
+    {% include '_scripts/pages/post-details.njk' %}
   {%- endif %}
 {% endblock %}
