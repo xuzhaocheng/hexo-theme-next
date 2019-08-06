@@ -1,10 +1,12 @@
 {{ open_graph() }}
 
 {% if theme.rss === '' and config.feed and config.feed.path %}
-  {% set theme.rss = config.feed.path %}
+  {% set rss = config.feed.path %}
+{% elif theme.rss %}
+  {% set rss = theme.rss %}
 {% endif %}
-{% if theme.rss %}
-  <link rel="alternate" href="{{ url_for(theme.rss) }}" title="{{ title }}" type="application/atom+xml">
+{% if rss %}
+  <link rel="alternate" href="{{ url_for(rss) }}" title="{{ title }}" type="application/atom+xml">
 {% endif %}
 
 {% if theme.canonical %}
